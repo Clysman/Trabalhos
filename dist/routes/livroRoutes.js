@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const livroController_1 = require("C:/Projeto- CRUD Gerenciamento de Livros em uma Biblioteca/crud-project-typescript/src/controllers/livroController");
+const router = (0, express_1.Router)();
+router.post('/', livroController_1.createLivro);
+router.get('/', livroController_1.getAllLivros);
+router.get('/:id', livroController_1.getLivroById);
+router.put('/:id', livroController_1.updateLivro);
+router.delete('/:id', livroController_1.deleteLivro);
+exports.default = router;
